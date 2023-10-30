@@ -3,6 +3,7 @@
 Fixed::Fixed()
 {
     std::cout<<"Default constructor called\n";
+    nmb = 0;
 }
 
 Fixed::Fixed(const Fixed &Fixed)
@@ -31,5 +32,6 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
+    std::cout<<"setRawBits member function called\n";
     this->nmb = raw;
 }
