@@ -1,7 +1,9 @@
-NAME = Point
+NAME = Fixed
 
-SRCS = Fixed.cpp \
+SRCS = bsp.cpp \
+		Fixed.cpp \
 		main.cpp \
+		Point.cpp \
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

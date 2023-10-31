@@ -44,19 +44,17 @@ std::ostream& operator<<(std::ostream& os, const Fixed &Fixed)
 
 int Fixed::getRawBits(void) const
 {
-//    std::cout<<"getRawBits member function called\n";
    return (this->nmb);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    // std::cout<<"setRawBits member function called\n";
     this->nmb = raw;
 }
 
 float Fixed::toFloat(void) const
 {
-    return(static_cast<float>(nmb / (1 << bits)));
+    return(static_cast<float>(nmb) / (1 << bits));
 }
 
 int Fixed::toInt(void) const
