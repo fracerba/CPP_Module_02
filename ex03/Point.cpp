@@ -10,10 +10,8 @@ Point::Point()
 Point::Point(const float f1, const float f2)
 {
     std::cout<<"Point Float constructor called\n";
-    Fixed a(f1);
-    Fixed b(f2);
-    const_cast<Fixed&>(x) = a;
-    const_cast<Fixed&>(y) = b;
+    const_cast<Fixed&>(x) = f1;
+    const_cast<Fixed&>(y) = f2;
 }
 
 Point::Point(const Point &Point)
