@@ -2,5 +2,7 @@
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
+    if()
+        return (true);
     return (true);
 }
