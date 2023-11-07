@@ -142,7 +142,7 @@ int Fixed::toInt(void) const
 
 const Fixed& Fixed::max(const Fixed &Fix1, const Fixed &Fix2)
 {
-    if (Fix1.nmb > Fix2.nmb)
+    if (Fix1.getRawBits() > Fix2.getRawBits())
         return (Fix1);
     else
         return (Fix2);
@@ -150,7 +150,7 @@ const Fixed& Fixed::max(const Fixed &Fix1, const Fixed &Fix2)
 
 const Fixed& Fixed::min(const Fixed &Fix1, const Fixed &Fix2)
 {
-    if (Fix1.nmb < Fix2.nmb)
+    if (Fix1.getRawBits() < Fix2.getRawBits())
         return (Fix1);
     else
         return (Fix2);
@@ -158,7 +158,7 @@ const Fixed& Fixed::min(const Fixed &Fix1, const Fixed &Fix2)
 
 Fixed& Fixed::max(Fixed &Fix1, Fixed &Fix2)
 {
-    if (Fix1.nmb > Fix2.nmb)
+    if (Fix1.getRawBits() > Fix2.getRawBits())
         return (Fix1);
     else
         return (Fix2);
@@ -166,7 +166,7 @@ Fixed& Fixed::max(Fixed &Fix1, Fixed &Fix2)
 
 Fixed& Fixed::min(Fixed &Fix1, Fixed &Fix2)
 {
-    if (Fix1.nmb < Fix2.nmb)
+    if (Fix1.getRawBits() < Fix2.getRawBits())
         return (Fix1);
     else
         return (Fix2);

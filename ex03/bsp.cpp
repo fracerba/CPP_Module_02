@@ -2,11 +2,16 @@
 
 float find_area(Point const a, Point const b, Point const c)
 {
-    float ab;
-    float bc;
-    float ac;
+    float ax = a.getX().toFloat();
+    float bx = b.getX().toFloat();
+    float cx = c.getX().toFloat();
+    float ay = a.getY().toFloat();
+    float by = b.getY().toFloat();
+    float cy = c.getY().toFloat();
+    float det;
 
-    return(ab / 2.0);    
+    det = (ax * by) + (ay * cx) + (bx * cy) - (by * cx) - (ay * bx) - (ax * cy);
+    return(std::abs(det)/ 2.0);
 }
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
